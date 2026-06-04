@@ -1,0 +1,9 @@
+[package]
+name = "beta-test-alex"
+version = "0.1.0"
+edition = "2021"
+description = "Beta test for SuperInstance ternary agent crates — NPC behavior evolution"
+authors = ["Alex (beta-tester)"]
+
+[dependencies]
+rand = "0.8"
