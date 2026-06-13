@@ -67,6 +67,10 @@ Beta Test Alex validates the **ternary evolution substrate** that underpins γ +
 
 See [ARCHITECTURE.md](https://github.com/SuperInstance/SuperInstance/blob/main/ARCHITECTURE.md).
 
+**Selection pressure and convergence:** The tournament selection with tournament size T applies selection pressure proportional to ln(2)/ln(2 − 1/T). For T = 3 (used in this crate), the takeover time — generations until the entire population descends from the best initial individual — is approximately log₂(N)/log₂(2T/(T+1)) ≈ 15 generations for N = 100. Mutation rate 0.01 per locus with 24 loci means ~0.24 mutations per genome per generation, providing sufficient exploration without excessive disruption.
+
+**Conservation law manifestation:** The ternary action space directly encodes conservation: Avoid (−1) + Choose (+1) = 0 (Unknown). The sum of all ternary actions across a balanced population should approach zero — a direct mathematical instance of γ + η = C.
+
 ## References
 
 1. Holland, J.H. (1992). *Adaptation in Natural and Artificial Systems*. MIT Press.
